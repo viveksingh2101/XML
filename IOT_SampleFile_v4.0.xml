@@ -1,0 +1,1641 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tadig-raex-iot:TADIGRAEXIOT xmlns:ns="https://infocentre.gsm.org/TADIG-GEN" xmlns:tadig-raex-iot="https://infocentre.gsm.org/TADIG-RAEX-IOT" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DocumentHeader>
+    <VPMN>ROAM8</VPMN>
+    <HPMN>ROAM8</HPMN>
+    <Sender>ROAM8</Sender>
+    <Recipient>ROAM8</Recipient>
+    <EffectiveDate>2018-10-25</EffectiveDate>
+    <SubmissionDT>2019-02-25T10:43:50+01:00</SubmissionDT>
+    <IOTIdentifier>SchemaVersion 4.0 </IOTIdentifier>
+    <CorrectionSequence>1</CorrectionSequence>
+    <TypeOfIOT>
+      <StandardIOT/>
+    </TypeOfIOT>
+    <TypeOfChange>
+      <Standard>First</Standard>
+    </TypeOfChange>
+    <PublishComment>Sample file IotSchemaVersion 4.0</PublishComment>
+    <InternalReferenceId>20181025</InternalReferenceId>
+    <IotSchemaVersion>4.0</IotSchemaVersion>
+    <TADIGGenSchemaVersion>2.4</TADIGGenSchemaVersion>
+  </DocumentHeader>
+  <VPMNTADIGCodeList>
+    <TADIGCode>ROAM8</TADIGCode>
+  </VPMNTADIGCodeList>
+  <HPMNTADIGCodeList>
+    <TADIGCode>ROAM1</TADIGCode>
+  </HPMNTADIGCodeList>
+  <CurrencyInfo>
+    <IOTCurrency>EUR</IOTCurrency>
+    <FixedCurrency>
+      <FixedCurrency>AMD</FixedCurrency>
+      <FixedCurrencyXchangeRate>1.5</FixedCurrencyXchangeRate>
+    </FixedCurrency>
+  </CurrencyInfo>
+  <TaxDefinition>
+    <TaxApplicable>
+      <TaxApplicationList>
+        <TaxApplication VAT="false" appliesToAllIOTRates="false" recovery="false" taxType="National">
+          <TaxName>National</TaxName>
+          <TaxRateType>
+            <TaxRatePercentage>
+              <TaxRate>10</TaxRate>
+            </TaxRatePercentage>
+          </TaxRateType>
+        </TaxApplication>
+        <TaxApplication VAT="false" appliesToAllIOTRates="false" recovery="false" taxType="County">
+          <TaxName>International</TaxName>
+          <TaxRateType>
+            <TaxRateFixedInterval>
+              <TaxRateFixedIntervalName>Fix per interval</TaxRateFixedIntervalName>
+              <TaxRateFixedIntervalLength scaleUnit="min" scaleValue="2"/>
+              <TaxRateFixedIntervalRounding scaleUnit="sec" scaleValue="1"/>
+              <TaxRateFixedIntervalApplicator>2</TaxRateFixedIntervalApplicator>
+              <TaxRateFixedIntervalValueType>
+                <TaxRateFixedIntervalValue>15</TaxRateFixedIntervalValue>
+              </TaxRateFixedIntervalValueType>
+            </TaxRateFixedInterval>
+          </TaxRateType>
+        </TaxApplication>
+      </TaxApplicationList>
+    </TaxApplicable>
+  </TaxDefinition>
+  <VPMNMarkup>
+    <VPMNMarkupToBeAdded>23</VPMNMarkupToBeAdded>
+  </VPMNMarkup>
+  <SpecialDayList>
+    <SpecialDay>
+      <tadig-raex-iot:SpecialDayName>Christmas</tadig-raex-iot:SpecialDayName>
+      <RecurringDate>--12-25</RecurringDate>
+    </SpecialDay>
+    <SpecialDay>
+      <tadig-raex-iot:SpecialDayName>Easter</tadig-raex-iot:SpecialDayName>
+      <NonRecDate>2019-01-25</NonRecDate>
+    </SpecialDay>
+  </SpecialDayList>
+  <TimeBandList>
+    <TimeBand>
+      <tadig-raex-iot:TimeBandName>Peak</tadig-raex-iot:TimeBandName>
+      <TBDefList>
+        <TBDefinition endTime="17:59:59" startTime="06:00:00">
+          <WeekDays>
+            <None/>
+          </WeekDays>
+          <SpecialDays>
+            <All/>
+          </SpecialDays>
+        </TBDefinition>
+      </TBDefList>
+    </TimeBand>
+    <TimeBand>
+      <tadig-raex-iot:TimeBandName>Off Peak</tadig-raex-iot:TimeBandName>
+      <TBDefList>
+        <TBDefinition endTime="23:59:59" startTime="18:00:00">
+          <WeekDays>
+            <None/>
+          </WeekDays>
+          <SpecialDays>
+            <None/>
+          </SpecialDays>
+        </TBDefinition>
+        <TBDefinition endTime="05:59:59" startTime="00:00:00">
+          <WeekDays>
+            <None/>
+          </WeekDays>
+          <SpecialDays>
+            <None/>
+          </SpecialDays>
+        </TBDefinition>
+        <TBDefinition endTime="23:59:59" startTime="00:00:00">
+          <WeekDays>
+            <None/>
+          </WeekDays>
+          <SpecialDays>
+            <None/>
+          </SpecialDays>
+        </TBDefinition>
+      </TBDefList>
+    </TimeBand>
+    <TimeBand>
+      <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+      <TBDefList>
+        <TBDefinition endTime="23:23:59" startTime="00:00:00">
+          <WeekDays>
+            <All/>
+          </WeekDays>
+          <SpecialDays>
+            <All/>
+          </SpecialDays>
+        </TBDefinition>
+      </TBDefList>
+    </TimeBand>
+  </TimeBandList>
+  <DestBandDefList>
+    <DestBand>
+      <tadig-raex-iot:DestinationBandName>National</tadig-raex-iot:DestinationBandName>
+      <tadig-raex-iot:DestinationList>
+        <tadig-raex-iot:Destination>
+          <Name>National</Name>
+          <CountryCode>43</CountryCode>
+          <tadig-raex-iot:DestinationIdentifierList>
+            <Prefix>43</Prefix>
+          </tadig-raex-iot:DestinationIdentifierList>
+          <DestinationType>O</DestinationType>
+        </tadig-raex-iot:Destination>
+      </tadig-raex-iot:DestinationList>
+    </DestBand>
+    <DestBand>
+      <tadig-raex-iot:DestinationBandName>Emergency</tadig-raex-iot:DestinationBandName>
+      <tadig-raex-iot:DestinationList>
+        <tadig-raex-iot:Destination>
+          <Name>Emergency</Name>
+          <CountryCode>43</CountryCode>
+          <tadig-raex-iot:DestinationIdentifierList>
+            <ShortCode>112</ShortCode>
+          </tadig-raex-iot:DestinationIdentifierList>
+          <DestinationType>EM</DestinationType>
+        </tadig-raex-iot:Destination>
+      </tadig-raex-iot:DestinationList>
+    </DestBand>
+    <DestBand>
+      <tadig-raex-iot:DestinationBandName>International</tadig-raex-iot:DestinationBandName>
+      <tadig-raex-iot:DestinationList>
+        <tadig-raex-iot:Destination>
+          <Name>Euroland</Name>
+          <CountryCode>40</CountryCode>
+          <tadig-raex-iot:DestinationIdentifierList>
+            <Prefix>40</Prefix>
+          </tadig-raex-iot:DestinationIdentifierList>
+          <DestinationType>O</DestinationType>
+        </tadig-raex-iot:Destination>
+        <tadig-raex-iot:Destination>
+          <Name>France</Name>
+          <CountryCode>33</CountryCode>
+          <tadig-raex-iot:DestinationIdentifierList>
+            <Prefix>33</Prefix>
+          </tadig-raex-iot:DestinationIdentifierList>
+          <DestinationType>O</DestinationType>
+        </tadig-raex-iot:Destination>
+        <tadig-raex-iot:Destination>
+          <Name>United Kingdom</Name>
+          <CountryCode>44</CountryCode>
+          <tadig-raex-iot:DestinationIdentifierList>
+            <Prefix>44</Prefix>
+          </tadig-raex-iot:DestinationIdentifierList>
+          <DestinationType>O</DestinationType>
+        </tadig-raex-iot:Destination>
+      </tadig-raex-iot:DestinationList>
+    </DestBand>
+    <DestBand>
+      <tadig-raex-iot:DestinationBandName>Satelite</tadig-raex-iot:DestinationBandName>
+      <tadig-raex-iot:DestinationList>
+        <tadig-raex-iot:Destination>
+          <Name>Satelite 1</Name>
+          <CountryCode>881</CountryCode>
+          <tadig-raex-iot:DestinationIdentifierList>
+            <Prefix>881</Prefix>
+          </tadig-raex-iot:DestinationIdentifierList>
+          <DestinationType>O</DestinationType>
+        </tadig-raex-iot:Destination>
+        <tadig-raex-iot:Destination>
+          <Name>Satelite 2</Name>
+          <CountryCode>882</CountryCode>
+          <tadig-raex-iot:DestinationIdentifierList>
+            <Prefix>882</Prefix>
+          </tadig-raex-iot:DestinationIdentifierList>
+        </tadig-raex-iot:Destination>
+      </tadig-raex-iot:DestinationList>
+    </DestBand>
+    <DestBand>
+      <tadig-raex-iot:DestinationBandName>RotW</tadig-raex-iot:DestinationBandName>
+      <RestOfWorld/>
+    </DestBand>
+    <DestBand>
+      <tadig-raex-iot:DestinationBandName>Calls back home</tadig-raex-iot:DestinationBandName>
+      <CallsBackHome/>
+    </DestBand>
+  </DestBandDefList>
+  <PublicUserIdList>
+    <PublicUserId>
+      <PublicUserIdName>Sample Public ID</PublicUserIdName>
+      <PublicUserIdDestination>Sample Public ID</PublicUserIdDestination>
+    </PublicUserId>
+  </PublicUserIdList>
+  <APNBandList>
+    <APNBand>
+      <APNBandName>Others</APNBandName>
+      <AllOtherAPN/>
+    </APNBand>
+  </APNBandList>
+  <HotSpotList>
+    <HotSpotBand>
+      <HotSpotBandName>Other WLAN</HotSpotBandName>
+      <AllOtherHotspot/>
+    </HotSpotBand>
+  </HotSpotList>
+  <ChargingPolicy>
+    <ChannelSeizureCharged>false</ChannelSeizureCharged>
+    <SegmentationRule>
+      <NoSegRule/>
+    </SegmentationRule>
+    <UnsuccessfulCallAttempts>
+      <YesUCA>
+        <ThresholdUCA scaleUnit="sec" scaleValue="1"/>
+      </YesUCA>
+    </UnsuccessfulCallAttempts>
+    <WLANSessionSetupAttempt>
+      <YesWSSA>
+        <ThresholdWSSA scaleUnit="byte" scaleValue="1"/>
+      </YesWSSA>
+    </WLANSessionSetupAttempt>
+    <tadig-raex-iot:PSDataHandling>
+      <AvailablePSData>
+        <minChargePerPartial>false</minChargePerPartial>
+        <minChargeZeroVolume>true</minChargeZeroVolume>
+        <independentRating>true</independentRating>
+        <numberOfPartialPer24h>2</numberOfPartialPer24h>
+        <VoLTE>
+          <AvailableVoLTE>
+            <ChargingForBearer>false</ChargingForBearer>
+            <BearerUsageInTap>false</BearerUsageInTap>
+          </AvailableVoLTE>
+        </VoLTE>
+        <PDPSessionSetupAttempt>
+          <YesPSSA>
+            <Threshold scaleUnit="byte" scaleValue="2"/>
+          </YesPSSA>
+        </PDPSessionSetupAttempt>
+      </AvailablePSData>
+    </tadig-raex-iot:PSDataHandling>
+  </ChargingPolicy>
+  <tadig-raex-iot:CallTypes>
+    <MOC>
+      <DurRatingIntervalList>
+        <DurRatingInterval>
+          <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+          <DurIntervalList>
+            <DurInterval applicator="0" scaleUnit="min" scaleValue="1"/>
+          </DurIntervalList>
+        </DurRatingInterval>
+        <DurRatingInterval>
+          <tadig-raex-iot:RatingIntervalName>Per second</tadig-raex-iot:RatingIntervalName>
+          <DurIntervalList>
+            <DurInterval applicator="0" scaleUnit="sec" scaleValue="1"/>
+          </DurIntervalList>
+        </DurRatingInterval>
+      </DurRatingIntervalList>
+      <NormalizedPriceDef scaleUnit="min" scaleValue="1"/>
+      <Services>
+        <ServiceList>
+          <MOService>Telephony</MOService>
+        </ServiceList>
+        <LocationRoamerList>
+          <LocationRoamer>
+            <LocationDefinition>
+              <AnyLocation/>
+            </LocationDefinition>
+            <DestinationBandList>
+              <DestinationBand>
+                <tadig-raex-iot:DestinationBandName>National</tadig-raex-iot:DestinationBandName>
+                <CTLSetList>
+                  <CTLSet ctl1="1" ctl2="1" ctl3="3">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">60</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>National</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                  <CTLSet ctl1="1" ctl2="2" ctl3="3">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">60</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>National</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                </CTLSetList>
+              </DestinationBand>
+              <DestinationBand>
+                <tadig-raex-iot:DestinationBandName>International</tadig-raex-iot:DestinationBandName>
+                <CTLSetList>
+                  <CTLSet ctl1="2" ctl2="2" ctl3="2">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">60</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>International</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                  <CTLSet ctl1="2" ctl2="1" ctl3="2">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">60</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>International</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                </CTLSetList>
+              </DestinationBand>
+              <DestinationBand>
+                <tadig-raex-iot:DestinationBandName>Satelite</tadig-raex-iot:DestinationBandName>
+                <CTLSetList>
+                  <CTLSet ctl1="1" ctl2="5" ctl3="3">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per second</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">6</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>National</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                  <CTLSet ctl1="2" ctl2="5" ctl3="3">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per second</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">6</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>International</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                </CTLSetList>
+              </DestinationBand>
+              <DestinationBand>
+                <tadig-raex-iot:DestinationBandName>Emergency</tadig-raex-iot:DestinationBandName>
+                <CTLSetList>
+                  <CTLSet ctl1="1" ctl2="3" ctl3="1">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">0</tadig-raex-iot:Rate>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                </CTLSetList>
+              </DestinationBand>
+              <DestinationBand>
+                <tadig-raex-iot:DestinationBandName>Calls back home</tadig-raex-iot:DestinationBandName>
+                <CTLSetList>
+                  <CTLSet ctl1="0" ctl2="0" ctl3="1">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Peak</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="N">1</tadig-raex-iot:Rate>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Off Peak</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="N">0.5</tadig-raex-iot:Rate>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                </CTLSetList>
+              </DestinationBand>
+              <DestinationBand>
+                <PublicUserIdName>Sample Public ID</PublicUserIdName>
+                <CTLSetList>
+                  <CTLSet ctl1="0" ctl2="0" ctl3="2">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <FixChargedItem>
+                                  <Rate>1</Rate>
+                                  <tadig-raex-iot:ApplicableTaxes>
+                                    <TaxName>International</TaxName>
+                                  </tadig-raex-iot:ApplicableTaxes>
+                                </FixChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                </CTLSetList>
+              </DestinationBand>
+              <DestinationBand>
+                <tadig-raex-iot:DestinationBandName>RotW</tadig-raex-iot:DestinationBandName>
+                <CTLSetList>
+                  <CTLSet ctl1="2" ctl2="1" ctl3="1">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="N">10</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>International</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                </CTLSetList>
+              </DestinationBand>
+            </DestinationBandList>
+          </LocationRoamer>
+        </LocationRoamerList>
+      </Services>
+      <Services>
+        <ServiceList>
+          <MOService>Synchronous Data (VT)</MOService>
+        </ServiceList>
+        <LocationRoamerList>
+          <LocationRoamer>
+            <LocationDefinition>
+              <AnyLocation/>
+            </LocationDefinition>
+            <DestinationBandList>
+              <DestinationBand>
+                <tadig-raex-iot:DestinationBandName>National</tadig-raex-iot:DestinationBandName>
+                <CTLSetList>
+                  <CTLSet ctl1="1" ctl2="1" ctl3="3">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">60</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>National</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                  <CTLSet ctl1="1" ctl2="2" ctl3="3">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">60</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>National</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                </CTLSetList>
+              </DestinationBand>
+              <DestinationBand>
+                <tadig-raex-iot:DestinationBandName>International</tadig-raex-iot:DestinationBandName>
+                <CTLSetList>
+                  <CTLSet ctl1="2" ctl2="2" ctl3="2">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">60</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>International</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                  <CTLSet ctl1="2" ctl2="1" ctl3="2">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">60</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>International</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                </CTLSetList>
+              </DestinationBand>
+              <DestinationBand>
+                <tadig-raex-iot:DestinationBandName>Satelite</tadig-raex-iot:DestinationBandName>
+                <CTLSetList>
+                  <CTLSet ctl1="2" ctl2="5" ctl3="3">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per second</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">6</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>International</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                </CTLSetList>
+              </DestinationBand>
+            </DestinationBandList>
+          </LocationRoamer>
+        </LocationRoamerList>
+      </Services>
+      <Services>
+        <ServiceList>
+          <MOService>HSCSD Asymmetric</MOService>
+        </ServiceList>
+        <LocationRoamerList>
+          <LocationRoamer>
+            <LocationDefinition>
+              <AnyLocation/>
+            </LocationDefinition>
+            <DestinationBandList>
+              <DestinationBand>
+                <tadig-raex-iot:DestinationBandName>National</tadig-raex-iot:DestinationBandName>
+                <CTLSetList>
+                  <CTLSet ctl1="1" ctl2="1" ctl3="3">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">60</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>National</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                  <CTLSet ctl1="1" ctl2="2" ctl3="3">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">60</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>National</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                </CTLSetList>
+              </DestinationBand>
+              <DestinationBand>
+                <tadig-raex-iot:DestinationBandName>International</tadig-raex-iot:DestinationBandName>
+                <CTLSetList>
+                  <CTLSet ctl1="2" ctl2="2" ctl3="2">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">60</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>International</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                  <CTLSet ctl1="2" ctl2="1" ctl3="2">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">60</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>International</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                </CTLSetList>
+              </DestinationBand>
+              <DestinationBand>
+                <tadig-raex-iot:DestinationBandName>Satelite</tadig-raex-iot:DestinationBandName>
+                <CTLSetList>
+                  <CTLSet ctl1="2" ctl2="5" ctl3="3">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">120</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>International</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                </CTLSetList>
+              </DestinationBand>
+            </DestinationBandList>
+          </LocationRoamer>
+        </LocationRoamerList>
+      </Services>
+      <Services>
+        <ServiceList>
+          <MOService>HSCSD Symmetric</MOService>
+        </ServiceList>
+        <LocationRoamerList>
+          <LocationRoamer>
+            <LocationDefinition>
+              <AnyLocation/>
+            </LocationDefinition>
+            <DestinationBandList>
+              <DestinationBand>
+                <tadig-raex-iot:DestinationBandName>National</tadig-raex-iot:DestinationBandName>
+                <CTLSetList>
+                  <CTLSet ctl1="1" ctl2="1" ctl3="3">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">60</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>National</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                  <CTLSet ctl1="1" ctl2="2" ctl3="3">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">60</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>National</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                </CTLSetList>
+              </DestinationBand>
+              <DestinationBand>
+                <tadig-raex-iot:DestinationBandName>International</tadig-raex-iot:DestinationBandName>
+                <CTLSetList>
+                  <CTLSet ctl1="2" ctl2="2" ctl3="2">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">60</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>International</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                  <CTLSet ctl1="2" ctl2="1" ctl3="2">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">60</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>International</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                </CTLSetList>
+              </DestinationBand>
+              <DestinationBand>
+                <tadig-raex-iot:DestinationBandName>Satelite</tadig-raex-iot:DestinationBandName>
+                <CTLSetList>
+                  <CTLSet ctl1="2" ctl2="5" ctl3="3">
+                    <IACInfo>
+                      <AnyIAC>
+                        <ApplicableTBList>
+                          <AppTB>
+                            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                            <ChargedItemList>
+                              <ChargedItem>
+                                <DurationChargedItem>
+                                  <tadig-raex-iot:RateSpecList>
+                                    <RateSpec chargeType="00">
+                                      <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                                      <tadig-raex-iot:Rate type="I">120</tadig-raex-iot:Rate>
+                                      <tadig-raex-iot:ApplicableTaxes>
+                                        <TaxName>International</TaxName>
+                                      </tadig-raex-iot:ApplicableTaxes>
+                                    </RateSpec>
+                                  </tadig-raex-iot:RateSpecList>
+                                </DurationChargedItem>
+                              </ChargedItem>
+                            </ChargedItemList>
+                          </AppTB>
+                        </ApplicableTBList>
+                      </AnyIAC>
+                    </IACInfo>
+                  </CTLSet>
+                </CTLSetList>
+              </DestinationBand>
+            </DestinationBandList>
+          </LocationRoamer>
+        </LocationRoamerList>
+      </Services>
+      <tadig-raex-iot:CAMELInvocationFee>
+        <BasicLevel>
+          <Fee>12</Fee>
+          <tadig-raex-iot:ApplicableTaxes>
+            <TaxName>International</TaxName>
+          </tadig-raex-iot:ApplicableTaxes>
+        </BasicLevel>
+        <MediumLevel>
+          <Fee>12</Fee>
+          <tadig-raex-iot:ApplicableTaxes>
+            <TaxName>International</TaxName>
+          </tadig-raex-iot:ApplicableTaxes>
+        </MediumLevel>
+        <HighLevel>
+          <Fee>24</Fee>
+          <tadig-raex-iot:ApplicableTaxes>
+            <TaxName>International</TaxName>
+          </tadig-raex-iot:ApplicableTaxes>
+        </HighLevel>
+        <MaxLevel>
+          <Fee>24</Fee>
+          <tadig-raex-iot:ApplicableTaxes>
+            <TaxName>International</TaxName>
+          </tadig-raex-iot:ApplicableTaxes>
+        </MaxLevel>
+      </tadig-raex-iot:CAMELInvocationFee>
+    </MOC>
+    <MTC>
+      <MTChargedAlways>
+        <MTRatingIntervalList>
+          <DurRatingInterval>
+            <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+            <DurIntervalList>
+              <DurInterval applicator="0" scaleUnit="min" scaleValue="1"/>
+            </DurIntervalList>
+          </DurRatingInterval>
+        </MTRatingIntervalList>
+        <MTServices>
+          <ServiceList>
+            <Service>Telephony</Service>
+			<Service>International</Service>
+          </ServiceList>
+          <LocationBandList>
+            <LocationBand>
+              <LocationDefinition>
+                <AnyLocation/>
+              </LocationDefinition>
+              <CTLSetList>
+                <CTLSet ctl1="0" ctl2="6" ctl3="0">
+                  <AppTB>
+                    <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                    <ChargedItemList>
+                      <ChargedItem>
+                        <DurationChargedItem>
+                          <tadig-raex-iot:MTRateSpecList>
+                            <RateSpec chargeType="00">
+                              <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                              <tadig-raex-iot:Rate type="I">0</tadig-raex-iot:Rate>
+                              <tadig-raex-iot:ApplicableTaxes>
+                                <TaxName>National</TaxName>
+                              </tadig-raex-iot:ApplicableTaxes>
+                            </RateSpec>
+                          </tadig-raex-iot:MTRateSpecList>
+                        </DurationChargedItem>
+                      </ChargedItem>
+                    </ChargedItemList>
+                  </AppTB>
+                  <AppTB>
+                    <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                    <ChargedItemList>
+                      <ChargedItem>
+                        <DurationChargedItem>
+                          <tadig-raex-iot:MTRateSpecList>
+                            <RateSpec chargeType="00">
+                              <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                              <tadig-raex-iot:Rate type="I">60</tadig-raex-iot:Rate>
+                              <tadig-raex-iot:ApplicableTaxes>
+                                <TaxName>National</TaxName>
+                              </tadig-raex-iot:ApplicableTaxes>
+                            </RateSpec>
+                          </tadig-raex-iot:MTRateSpecList>
+                        </DurationChargedItem>
+                      </ChargedItem>
+                    </ChargedItemList>
+                  </AppTB>
+                </CTLSet>
+                <CTLSet ctl1="0" ctl2="7">
+                  <AppTB>
+                    <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                    <ChargedItemList>
+                      <ChargedItem>
+                        <DurationChargedItem>
+                          <tadig-raex-iot:MTRateSpecList>
+                            <RateSpec chargeType="00">
+                              <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                              <tadig-raex-iot:Rate type="I">0</tadig-raex-iot:Rate>
+                              <tadig-raex-iot:ApplicableTaxes>
+                                <TaxName>National</TaxName>
+                              </tadig-raex-iot:ApplicableTaxes>
+                            </RateSpec>
+                          </tadig-raex-iot:MTRateSpecList>
+                        </DurationChargedItem>
+                      </ChargedItem>
+                    </ChargedItemList>
+                  </AppTB>
+                  <AppTB>
+                    <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                    <ChargedItemList>
+                      <ChargedItem>
+                        <DurationChargedItem>
+                          <tadig-raex-iot:MTRateSpecList>
+                            <RateSpec chargeType="00">
+                              <tadig-raex-iot:RatingIntervalName>Per minute</tadig-raex-iot:RatingIntervalName>
+                              <tadig-raex-iot:Rate type="I">60</tadig-raex-iot:Rate>
+                              <tadig-raex-iot:ApplicableTaxes>
+                                <TaxName>National</TaxName>
+                              </tadig-raex-iot:ApplicableTaxes>
+                            </RateSpec>
+                          </tadig-raex-iot:MTRateSpecList>
+                        </DurationChargedItem>
+                      </ChargedItem>
+                    </ChargedItemList>
+                  </AppTB>
+                </CTLSet>
+              </CTLSetList>
+            </LocationBand>
+          </LocationBandList>
+        </MTServices>
+        <tadig-raex-iot:CAMELInvocationFee>
+          <BasicLevel>
+            <Fee>12</Fee>
+            <tadig-raex-iot:ApplicableTaxes>
+              <TaxName>International</TaxName>
+            </tadig-raex-iot:ApplicableTaxes>
+          </BasicLevel>
+          <MediumLevel>
+            <Fee>12</Fee>
+            <tadig-raex-iot:ApplicableTaxes>
+              <TaxName>International</TaxName>
+            </tadig-raex-iot:ApplicableTaxes>
+          </MediumLevel>
+          <HighLevel>
+            <Fee>24</Fee>
+            <tadig-raex-iot:ApplicableTaxes>
+              <TaxName>International</TaxName>
+            </tadig-raex-iot:ApplicableTaxes>
+          </HighLevel>
+          <MaxLevel>
+            <Fee>24</Fee>
+            <tadig-raex-iot:ApplicableTaxes>
+              <TaxName>International</TaxName>
+            </tadig-raex-iot:ApplicableTaxes>
+          </MaxLevel>
+        </tadig-raex-iot:CAMELInvocationFee>
+      </MTChargedAlways>
+    </MTC>
+    <MOSMS>
+      <LocationBandList>
+        <LocationBand>
+          <LocationDefinition>
+            <AnyLocation/>
+          </LocationDefinition>
+          <DestinationBandList>
+            <DestinationBand>
+              <tadig-raex-iot:DestinationBandName>National</tadig-raex-iot:DestinationBandName>
+              <CTLSetList>
+                <CTLSet ctl1="1" ctl2="0" ctl3="2">
+                  <AppTBFix>
+                    <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                    <FixCharge>9</FixCharge>
+                    <tadig-raex-iot:ApplicableTaxes>
+                      <TaxName>National</TaxName>
+                    </tadig-raex-iot:ApplicableTaxes>
+                  </AppTBFix>
+                </CTLSet>
+              </CTLSetList>
+            </DestinationBand>
+            <DestinationBand>
+              <tadig-raex-iot:DestinationBandName>International</tadig-raex-iot:DestinationBandName>
+              <CTLSetList>
+                <CTLSet ctl1="2" ctl2="0" ctl3="3">
+                  <AppTBFix>
+                    <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                    <FixCharge>9</FixCharge>
+                    <tadig-raex-iot:ApplicableTaxes>
+                      <TaxName>International</TaxName>
+                    </tadig-raex-iot:ApplicableTaxes>
+                  </AppTBFix>
+                </CTLSet>
+              </CTLSetList>
+            </DestinationBand>
+          </DestinationBandList>
+        </LocationBand>
+      </LocationBandList>
+      <tadig-raex-iot:CAMELInvocationFee>
+        <BasicLevel>
+          <Fee>12</Fee>
+          <tadig-raex-iot:ApplicableTaxes>
+            <TaxName>International</TaxName>
+          </tadig-raex-iot:ApplicableTaxes>
+        </BasicLevel>
+        <MediumLevel>
+          <Fee>12</Fee>
+          <tadig-raex-iot:ApplicableTaxes>
+            <TaxName>International</TaxName>
+          </tadig-raex-iot:ApplicableTaxes>
+        </MediumLevel>
+        <HighLevel>
+          <Fee>24</Fee>
+          <tadig-raex-iot:ApplicableTaxes>
+            <TaxName>International</TaxName>
+          </tadig-raex-iot:ApplicableTaxes>
+        </HighLevel>
+        <MaxLevel>
+          <Fee>24</Fee>
+          <tadig-raex-iot:ApplicableTaxes>
+            <TaxName>International</TaxName>
+          </tadig-raex-iot:ApplicableTaxes>
+        </MaxLevel>
+      </tadig-raex-iot:CAMELInvocationFee>
+    </MOSMS>
+    <MTSMS>
+      <MTSMSChargedAlways>
+        <LocationBandList>
+          <LocationBand>
+            <LocationDefinition>
+              <AnyLocation/>
+            </LocationDefinition>
+            <AppTBFix>
+              <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+              <FixCharge>24</FixCharge>
+              <tadig-raex-iot:ApplicableTaxes>
+                <TaxName>National</TaxName>
+              </tadig-raex-iot:ApplicableTaxes>
+            </AppTBFix>
+          </LocationBand>
+        </LocationBandList>
+        <tadig-raex-iot:CAMELInvocationFee>
+          <BasicLevel>
+            <Fee>12</Fee>
+            <tadig-raex-iot:ApplicableTaxes>
+              <TaxName>International</TaxName>
+            </tadig-raex-iot:ApplicableTaxes>
+          </BasicLevel>
+          <MediumLevel>
+            <Fee>12</Fee>
+            <tadig-raex-iot:ApplicableTaxes>
+              <TaxName>International</TaxName>
+            </tadig-raex-iot:ApplicableTaxes>
+          </MediumLevel>
+          <HighLevel>
+            <Fee>24</Fee>
+            <tadig-raex-iot:ApplicableTaxes>
+              <TaxName>International</TaxName>
+            </tadig-raex-iot:ApplicableTaxes>
+          </HighLevel>
+          <MaxLevel>
+            <Fee>24</Fee>
+            <tadig-raex-iot:ApplicableTaxes>
+              <TaxName>International</TaxName>
+            </tadig-raex-iot:ApplicableTaxes>
+          </MaxLevel>
+        </tadig-raex-iot:CAMELInvocationFee>
+      </MTSMSChargedAlways>
+    </MTSMS>
+    <SSE>
+      <Service>
+        <SSETypeList>
+          <SSEType>CCBS</SSEType>
+		  <SSEType>CCBS</SSEType>
+        </SSETypeList>
+        <LocationBandList>
+          <LocationBand>
+            <LocationDefinition>
+              <AnyLocation/>
+            </LocationDefinition>
+            <AppTBFix>
+              <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+              <FixCharge>10</FixCharge>
+              <tadig-raex-iot:ApplicableTaxes>
+                <TaxName>National</TaxName>
+              </tadig-raex-iot:ApplicableTaxes>
+            </AppTBFix>
+          </LocationBand>
+        </LocationBandList>
+      </Service>
+    </SSE>
+    <USSD>
+      <LocationBandList>
+        <LocationBand>
+          <LocationDefinition>
+            <AnyLocation/>
+          </LocationDefinition>
+          <AppTBFix>
+            <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+            <FixCharge>1</FixCharge>
+            <tadig-raex-iot:ApplicableTaxes>
+              <TaxName>International</TaxName>
+            </tadig-raex-iot:ApplicableTaxes>
+          </AppTBFix>
+        </LocationBand>
+      </LocationBandList>
+    </USSD>
+    <PSData>
+      <VolRatingIntervalList>
+        <VolRatingInterval>
+          <tadig-raex-iot:RatingIntervalName>Per 64 bytes</tadig-raex-iot:RatingIntervalName>
+          <VolIntervalList>
+            <VolInterval applicator="0" scaleUnit="byte" scaleValue="64">
+              <VolRounding scaleUnit="byte" scaleValue="1024"/>
+            </VolInterval>
+          </VolIntervalList>
+        </VolRatingInterval>
+      </VolRatingIntervalList>
+      <DurRatingIntervalList>
+        <DurRatingInterval>
+          <tadig-raex-iot:RatingIntervalName>Per Second</tadig-raex-iot:RatingIntervalName>
+          <DurIntervalList>
+            <DurInterval applicator="0" scaleUnit="sec" scaleValue="1"/>
+          </DurIntervalList>
+        </DurRatingInterval>
+      </DurRatingIntervalList>
+      <LocationRoamerList>
+        <LocationRoamer>
+          <LocationDefinition>
+            <AnyLocation/>
+          </LocationDefinition>
+          <APNBandList>
+            <APNBand>
+              <BandName>Others</BandName>
+              <CTLSetList>
+                <CTLSet ctl1="11" ctl2="11" ctl3="0">
+                  <ApplicableTBList>
+                    <DataAppTB>
+                      <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                      <ChargedItemList>
+                        <ChargedItem>
+                          <Duration>
+                            <RateSpec>
+                              <tadig-raex-iot:RatingIntervalName>Per Second</tadig-raex-iot:RatingIntervalName>
+                              <tadig-raex-iot:Rate type="I">1</tadig-raex-iot:Rate>
+                              <tadig-raex-iot:ApplicableTaxes>
+                                <TaxName>National</TaxName>
+                              </tadig-raex-iot:ApplicableTaxes>
+                            </RateSpec>
+                          </Duration>
+                        </ChargedItem>
+                      </ChargedItemList>
+                    </DataAppTB>
+                  </ApplicableTBList>
+                </CTLSet>
+                <CTLSet ctl1="10" ctl2="11" ctl3="0">
+                  <ApplicableTBList>
+                    <DataAppTB>
+                      <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                      <ChargedItemList>
+                        <ChargedItem>
+                          <Duration>
+                            <RateSpec>
+                              <tadig-raex-iot:RatingIntervalName>Per Second</tadig-raex-iot:RatingIntervalName>
+                              <tadig-raex-iot:Rate type="I">1</tadig-raex-iot:Rate>
+                              <tadig-raex-iot:ApplicableTaxes>
+                                <TaxName>National</TaxName>
+                              </tadig-raex-iot:ApplicableTaxes>
+                            </RateSpec>
+                          </Duration>
+                        </ChargedItem>
+                      </ChargedItemList>
+                    </DataAppTB>
+                  </ApplicableTBList>
+                </CTLSet>
+                <CTLSet ctl1="11" ctl2="10" ctl3="0">
+                  <ApplicableTBList>
+                    <DataAppTB>
+                      <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                      <ChargedItemList>
+                        <ChargedItem>
+                          <Duration>
+                            <RateSpec>
+                              <tadig-raex-iot:RatingIntervalName>Per Second</tadig-raex-iot:RatingIntervalName>
+                              <tadig-raex-iot:Rate type="I">2</tadig-raex-iot:Rate>
+                              <tadig-raex-iot:ApplicableTaxes>
+                                <TaxName>National</TaxName>
+                              </tadig-raex-iot:ApplicableTaxes>
+                            </RateSpec>
+                          </Duration>
+                        </ChargedItem>
+                      </ChargedItemList>
+                    </DataAppTB>
+                  </ApplicableTBList>
+                </CTLSet>
+                <CTLSet ctl1="11" ctl2="11" ctl3="1">
+                  <ApplicableTBList>
+                    <DataAppTB>
+                      <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                      <ChargedItemList>
+                        <ChargedItem>
+                          <Duration>
+                            <RateSpec>
+                              <tadig-raex-iot:RatingIntervalName>Per Second</tadig-raex-iot:RatingIntervalName>
+                              <tadig-raex-iot:Rate type="I">1</tadig-raex-iot:Rate>
+                              <tadig-raex-iot:ApplicableTaxes>
+                                <TaxName>National</TaxName>
+                              </tadig-raex-iot:ApplicableTaxes>
+                            </RateSpec>
+                          </Duration>
+                        </ChargedItem>
+                      </ChargedItemList>
+                    </DataAppTB>
+                  </ApplicableTBList>
+                </CTLSet>
+                <CTLSet ctl1="10" ctl2="11" ctl3="1">
+                  <ApplicableTBList>
+                    <DataAppTB>
+                      <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                      <ChargedItemList>
+                        <ChargedItem>
+                          <Duration>
+                            <RateSpec>
+                              <tadig-raex-iot:RatingIntervalName>Per Second</tadig-raex-iot:RatingIntervalName>
+                              <tadig-raex-iot:Rate type="I">1</tadig-raex-iot:Rate>
+                              <tadig-raex-iot:ApplicableTaxes>
+                                <TaxName>National</TaxName>
+                              </tadig-raex-iot:ApplicableTaxes>
+                            </RateSpec>
+                          </Duration>
+                        </ChargedItem>
+                      </ChargedItemList>
+                    </DataAppTB>
+                  </ApplicableTBList>
+                </CTLSet>
+                <CTLSet ctl1="11" ctl2="10" ctl3="1">
+                  <ApplicableTBList>
+                    <DataAppTB>
+                      <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                      <ChargedItemList>
+                        <ChargedItem>
+                          <Duration>
+                            <RateSpec>
+                              <tadig-raex-iot:RatingIntervalName>Per Second</tadig-raex-iot:RatingIntervalName>
+                              <tadig-raex-iot:Rate type="I">2</tadig-raex-iot:Rate>
+                              <tadig-raex-iot:ApplicableTaxes>
+                                <TaxName>National</TaxName>
+                              </tadig-raex-iot:ApplicableTaxes>
+                            </RateSpec>
+                          </Duration>
+                        </ChargedItem>
+                      </ChargedItemList>
+                    </DataAppTB>
+                  </ApplicableTBList>
+                </CTLSet>
+                <CTLSet ctl1="11" ctl2="11" ctl3="1">
+                  <ApplicableTBList>
+                    <DataAppTB>
+                      <tadig-raex-iot:TimeBandName>Peak</tadig-raex-iot:TimeBandName>
+                      <ChargedItemList>
+                        <ChargedItem>
+                          <Total degressive="false">
+                            <RateSpec>
+                              <tadig-raex-iot:RatingIntervalName>Per 64 bytes</tadig-raex-iot:RatingIntervalName>
+                              <tadig-raex-iot:Rate type="I">1</tadig-raex-iot:Rate>
+                              <tadig-raex-iot:ApplicableTaxes>
+                                <TaxName>International</TaxName>
+                              </tadig-raex-iot:ApplicableTaxes>
+                            </RateSpec>
+                          </Total>
+                        </ChargedItem>
+                      </ChargedItemList>
+                    </DataAppTB>
+                  </ApplicableTBList>
+                </CTLSet>
+                <CTLSet ctl1="10" ctl2="11" ctl3="1">
+                  <ApplicableTBList>
+                    <DataAppTB>
+                      <tadig-raex-iot:TimeBandName>Peak</tadig-raex-iot:TimeBandName>
+                      <ChargedItemList>
+                        <ChargedItem>
+                          <Total degressive="false">
+                            <RateSpec>
+                              <tadig-raex-iot:RatingIntervalName>Per 64 bytes</tadig-raex-iot:RatingIntervalName>
+                              <tadig-raex-iot:Rate type="I">1</tadig-raex-iot:Rate>
+                              <tadig-raex-iot:ApplicableTaxes>
+                                <TaxName>International</TaxName>
+                              </tadig-raex-iot:ApplicableTaxes>
+                            </RateSpec>
+                          </Total>
+                        </ChargedItem>
+                      </ChargedItemList>
+                    </DataAppTB>
+                  </ApplicableTBList>
+                </CTLSet>
+                <CTLSet ctl1="11" ctl2="10" ctl3="1">
+                  <ApplicableTBList>
+                    <DataAppTB>
+                      <tadig-raex-iot:TimeBandName>Peak</tadig-raex-iot:TimeBandName>
+                      <ChargedItemList>
+                        <ChargedItem>
+                          <Total degressive="false">
+                            <RateSpec>
+                              <tadig-raex-iot:RatingIntervalName>Per 64 bytes</tadig-raex-iot:RatingIntervalName>
+                              <tadig-raex-iot:Rate type="I">1</tadig-raex-iot:Rate>
+                              <tadig-raex-iot:ApplicableTaxes>
+                                <TaxName>International</TaxName>
+                              </tadig-raex-iot:ApplicableTaxes>
+                            </RateSpec>
+                          </Total>
+                        </ChargedItem>
+                      </ChargedItemList>
+                    </DataAppTB>
+                  </ApplicableTBList>
+                </CTLSet>
+              </CTLSetList>
+            </APNBand>
+          </APNBandList>
+        </LocationRoamer>
+      </LocationRoamerList>
+    </PSData>
+    <WLAN>
+      <DurRatingIntervalList>
+        <DurRatingInterval>
+          <tadig-raex-iot:RatingIntervalName>Per Second</tadig-raex-iot:RatingIntervalName>
+          <DurIntervalList>
+            <DurInterval applicator="0" scaleUnit="sec" scaleValue="1"/>
+          </DurIntervalList>
+        </DurRatingInterval>
+      </DurRatingIntervalList>
+      <LocationRoamerList>
+        <LocationRoamer>
+          <LocationDefinition>
+            <AnyLocation/>
+          </LocationDefinition>
+          <HotspotList>
+            <Hotspot>
+              <HotSpotName>Other WLAN</HotSpotName>
+              <CTLSetList>
+                <CTLSet ctl1="100" ctl2="0" ctl3="0">
+                  <ApplicableTBList>
+                    <DataAppTB>
+                      <tadig-raex-iot:TimeBandName>Any</tadig-raex-iot:TimeBandName>
+                      <ChargedItemList>
+                        <ChargedItem>
+                          <Duration>
+                            <RateSpec>
+                              <tadig-raex-iot:RatingIntervalName>Per Second</tadig-raex-iot:RatingIntervalName>
+                              <tadig-raex-iot:Rate type="I">1</tadig-raex-iot:Rate>
+                              <tadig-raex-iot:ApplicableTaxes>
+                                <TaxName>National</TaxName>
+                              </tadig-raex-iot:ApplicableTaxes>
+                            </RateSpec>
+                          </Duration>
+                        </ChargedItem>
+                      </ChargedItemList>
+                    </DataAppTB>
+                  </ApplicableTBList>
+                </CTLSet>
+              </CTLSetList>
+            </Hotspot>
+          </HotspotList>
+        </LocationRoamer>
+      </LocationRoamerList>
+    </WLAN>
+  </tadig-raex-iot:CallTypes>
+</tadig-raex-iot:TADIGRAEXIOT>
